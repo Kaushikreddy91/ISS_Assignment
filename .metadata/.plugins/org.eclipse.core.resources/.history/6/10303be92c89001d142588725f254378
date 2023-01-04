@@ -1,0 +1,26 @@
+package oops;
+
+class Animal{
+	public void sound() {
+		System.out.println("Animal makes sound");
+	}
+} 
+class Lion extends Animal{   //Inheritance
+	public void sound() {    //Overriding
+		System.out.println("Lion roars");
+	}
+}
+
+public class inheritance {
+	public static void main(String[] args) {
+	
+		Animal a=new Animal();
+		Lion l=new Lion();
+	    Animal a2=new Lion();
+	
+		a.sound();
+		l.sound();
+		a2.sound();   //Polymorphism
+	}
+
+}

@@ -1,0 +1,45 @@
+package xml;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.lang.model.element.Element;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
+
+public class xmlread {
+	public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException{  
+		DocumentBuilderFactory dBfactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder = dBfactory.newDocumentBuilder();
+		// Fetch XML File
+		Document document = builder.parse(new File("emp.xml"));
+		document.getDocumentElement().normalize();
+		//Get root node
+		Element root = (Element) document.getDocumentElement();
+		System.out.println(root.getSimpleName());
+		//Get all students
+		NodeList nList = document.getElementsByTagName("employee");
+		System.out.println(".................................");
+
+		for (int i = 0; i < nList.getLength(); i++)
+		{
+			Node node = nList.item(i);
+			System.out.println();    //Just a separator
+			if (node.getNodeType() == Node.ELEMENT_NODE)
+			{
+				//Print each student's detail
+				Element element = (Element) node;
+				System.out.println("Employee id : "    + ((DocumentBuilderFactory) element).getAttribute("id"));
+				System.out.println("FirstName : "  + ((Document) element).getElementsByTagName("FirstName").item(0).getTextContent());
+				System.out.println("LastName : "   + ((Document) element).getElementsByTagName("LastName").item(0).getTextContent());
+				System.out.println("Email : "    + ((Document) element).getElementsByTagName("Email").item(0).getTextContent());
+				System.out.println("Department : "    + ((Document) element).getElementsByTagName("Department").item(0).getTextContent());
+			}
+		}
+	}
+
+}

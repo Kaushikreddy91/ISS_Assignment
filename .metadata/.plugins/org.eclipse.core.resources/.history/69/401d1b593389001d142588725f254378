@@ -1,0 +1,23 @@
+package exceptions;
+
+public class ExceptionHandling {
+
+	public static void main(String[] args) {
+		
+		int[] arr= {1,2,3,4,5};
+		try {
+			int k=arr[6];
+		}
+		catch(ArrayIndexOutOfBoundsException e){
+			System.out.println(e);
+		}
+		catch(Exception e) {     //Exception hierarchy
+			System.out.println(e);
+		}
+		finally {          //Block of code always gets executed
+			System.out.println("The code has run successfully");
+		}
+
+	}
+
+}

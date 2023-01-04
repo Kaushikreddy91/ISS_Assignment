@@ -1,0 +1,27 @@
+package Strings_Arrays;
+
+public class Stringex {
+	
+	static void length(String str) {
+		System.out.println("String Length: " +str.length());
+	}
+	static void lowercase(String str) {
+		System.out.println(str.toLowerCase());
+	}
+	static void uppercase(String str) {
+		System.out.println(str.toUpperCase());
+	}
+	static void concatenate(String str1, String str2) {
+		System.out.println("New String: "+ str1.concat(str2));
+	}
+	static void substr(String str,int start,int end) {
+		System.out.println("SubString is: "+ str.substring(start,end));
+	}
+	public static void main(String[] args) {
+		Stringex.length("Water");
+		Stringex.lowercase("KAUSHIK");
+		Stringex.uppercase("tree");
+		Stringex.concatenate("What","ever");
+		Stringex.substr("Someone",3,5);
+	}
+}

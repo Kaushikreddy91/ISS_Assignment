@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <style>
+        body{
+            color: white;
+        }
+        div{
+            background-color: rgb(116, 116, 116);
+            width: 450px;
+            border: 20px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+        #select{
+            width:65%;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <form name="form" onsubmit=" return validateForm()">
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="login" id="login" required></td>
+                    <td><p id="logintxt"></p></td>
+                </tr>
+                <tr>
+                    <td>
+                        Password 
+                    </td>
+                    <td>
+                        <input type="password" name="pwd" id="pass" required> 
+                    </td>
+                    <td>
+                        <p id="pwdtext"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password 
+                    </td>
+                    <td>
+                        <input type="password" name="conpwd" id="confirm" required> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender 
+                    </td>
+                    <td>
+                        <select id="select" name="gender">
+                            <option>MALE</option>
+                            <option>FEMALE</option>
+                            <option>OTHER</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email 
+                    </td>
+                    <td>
+                        <input type="text" id="mail" name="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>Register</button> 
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <p id="line1"></p>
+        <p id="line2"></p>
+        <p id="line3"></p>
+    </div>
+
+    <script>
+        const pwd = document.getElementById("pass");
+
+        function validateForm(){
+            var a = checkusername();
+            var b = checkpassword();
+            var c = confirmpassword();
+            var d = checkemail();
+            
+            if(a==false||b==false||c==false||d==false){
+                return false;
+            }else{
+                return true;
+            }    
+        }
+
+        function checkusername(){
+            var login = document.forms["form"]["login"].value;
+            var reglogin = /[a-zA-Z]{8,}/i;
+            var check = reglogin.test(login);
+            if(check==false){
+                document.getElementById("logintxt").innerHTML = "Min 8 characters";
+                document.getElementById("login").style.backgroundColor = "rgb(241, 147, 147)";
+                return false;
+            }
+            else{
+                document.getElementById("login").style.backgroundColor = "rgb(152, 236, 135)";
+                return true;
+            }
+        }
+
+        function checkpassword(){
+            var regpwd = /(?=.*[A-Z])(?=.*[a-z])(?=.*?[0-9]).{16,}/i;
+            var checkpwd = regpwd.test(pwd.value);
+            if(checkpwd==true){
+                document.getElementById("pwdtext").innerHTML = "strong";
+                document.getElementById("pass").style.backgroundColor = "rgb(152, 236, 135)";
+                return true;
+            }else{
+                document.getElementById("line1").innerHTML = "password must have atleast one uppercase, lowercase alphabet and a number";
+                document.getElementById("pass").style.backgroundColor = "rgb(241, 147, 147)";
+                return false;
+            }
+
+        }
+
+        function confirmpassword(){
+            var conpwd = document.forms["form"]["conpwd"].value;
+            if(conpwd!=pwd.value){
+                document.getElementById("line2").innerHTML = "Passwords are not the same";
+                document.getElementById("confirm").value = "";
+                document.getElementById("confirm").style.backgroundColor = "rgb(241, 147, 147)";
+                return false;
+            }else{
+                document.getElementById("confirm").style.backgroundColor = "rgb(152, 236, 135)";
+                return true;
+            }
+        }
+
+        function checkemail(){
+            var regemail=/^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+$/i
+            var email = document.forms["form"]["email"].value;
+            var checkemail = regemail.test(email);
+            if(checkemail==false){
+                document.getElementById("line3").innerHTML = "Mail format is not valid";
+                document.getElementById("mail").value = "";
+                document.getElementById("mail").style.backgroundColor = "rgb(241, 147, 147)";
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script> 
+</body>
+</html>

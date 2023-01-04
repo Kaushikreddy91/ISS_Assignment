@@ -1,0 +1,69 @@
+package Json;
+
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import java.util.Arrays;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
+
+
+public class Jsonwriter {
+	
+	/*
+	 * [
+	 * 		Student[
+	 * 					Name:Kaushik,
+	 * 					Roll_no:192023,
+	 * 					Branch:MPC
+	 * 					Marks[
+	 * 							Maths:90
+	 * 							Science:80
+	 * 							English:80
+	 * 					],
+	 * 					Status:Passed
+	 * 					
+	 * 		]
+	 * ]
+	 */
+	
+	static public JSONObject Studentdata(String name,int roll, String branch, int m,int s,int e,String status) {
+		JSONObject jsonStud=new JSONObject();
+		JSONObject jsonMarks=new JSONObject();
+		
+		jsonMarks.put("Maths",m);
+		jsonMarks.put("Science",s);
+		jsonMarks.put("English",e);
+		
+		jsonStud.put("Name",name);
+		jsonStud.put("Roll_no",roll);
+		jsonStud.put("Branch",branch);
+		jsonStud.put("Marks",jsonMarks);
+		jsonStud.put("Status",status);
+		
+		return jsonStud;
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		JSONObject kaushik=Jsonwriter.Studentdata("Kaushik",192023,"MPC",90,80,85,"Passed");
+		JSONObject Virat=Jsonwriter.Studentdata("Virat",212023,"MEC",38,22,475,"Failed");
+		
+		JSONArray studlist=new JSONArray();
+		studlist.add(kaushik);
+		studlist.add(Virat);
+		
+		try(FileWriter file =new FileWriter("stud.json")){
+			file.write(studlist.toJSONString());
+			System.out.println("Completed");
+			file.flush();
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+
+}

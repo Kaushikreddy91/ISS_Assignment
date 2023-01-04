@@ -1,0 +1,28 @@
+package dataType_Constructors;
+
+class Student{
+	int age;
+	
+	public Student() {
+		age=10;
+	}
+	
+	public Student(int age) {
+		this.age=age;
+	}
+	
+	public int getage() {
+		return age;
+	}
+}
+
+public class constructors {
+	public static void main(String[] args) {
+		//Student st=new Student();
+		Student st1=new Student(20);
+		
+		System.out.println(st1.getage());
+
+	}
+
+}

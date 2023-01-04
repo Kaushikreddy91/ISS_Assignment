@@ -1,0 +1,7 @@
+package oops;
+
+public interface Polygon {
+	int getArea();
+	void side();
+	void name();
+}

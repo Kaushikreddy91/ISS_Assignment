@@ -1,0 +1,10 @@
+package dbms;
+
+public class Callable_stmt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

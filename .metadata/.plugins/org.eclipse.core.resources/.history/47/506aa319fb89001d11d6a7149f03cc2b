@@ -1,0 +1,47 @@
+package Json;
+
+import org.json.*;
+import java.util.Arrays;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
+
+
+public class Jsonwriter {
+	
+	public void WritetoFile(String filepath, JSONObject jsonFile) {
+		try (PrintWriter outToFile = new PrintWriter(new FileWriter(filepath))) {
+			outToFile.write(jsonFile.toString());
+			System.out.println("Completed");
+            e.printStackTrace();
+        }
+	}
+	
+	/*
+	 * [
+	 * 		Student[
+	 * 					Name:Kaushik,
+	 * 					Roll_no:192023,
+	 * 					Branch:MPC
+	 * 					Marks[
+	 * 							Maths:90
+	 * 							Science:80
+	 * 							English:80
+	 * 					],
+	 * 					Status:Passed
+	 * 					
+	 * 		]
+	 * ]
+	 */
+	
+	static public JSONObject Studentdata(String name,int roll, String branch, int m,int s,int e,String status) {
+		JSONObject 
+	}
+	
+	
+
+	public static void main(String[] args) {
+
+	}
+
+}

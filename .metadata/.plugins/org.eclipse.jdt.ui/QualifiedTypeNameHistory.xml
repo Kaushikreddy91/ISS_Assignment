@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+    <fullyQualifiedTypeName name="org.json.JSONWriter"/>
+    <fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+    <fullyQualifiedTypeName name="org.xml.sax.SAXException"/>
+    <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilderFactory"/>
+    <fullyQualifiedTypeName name="javax.xml.parsers.ParserConfigurationException"/>
+    <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
+    <fullyQualifiedTypeName name="javax.lang.model.element.Element"/>
+    <fullyQualifiedTypeName name="javax.swing.text.Document"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="next.xadmin.login.bean.loginbean"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+</qualifiedTypeNameHistroy>

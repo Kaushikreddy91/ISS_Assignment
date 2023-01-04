@@ -1,0 +1,24 @@
+package oops;
+
+class Animal{
+	public void sound() {
+		System.out.println("Animal makes sound");
+	}
+} 
+class Lion extends Animal{
+	public void sound() {
+		System.out.println("Lion roars");
+	}
+}
+
+public class inheritance {
+	public static void main(String[] args) {
+	
+		Animal a=new Animal();
+		Lion l=new Lion();
+	
+		a.sound();
+		l.sound();
+	}
+
+}

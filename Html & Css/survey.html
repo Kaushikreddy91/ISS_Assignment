@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEY FORM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <h1 id="title">SURVEY</h1>
+    <p id="description">Please fill out the survey form</p>
+    <div id="formbody">
+    <form action="" id="form">
+        <fieldset id="box">
+            <label for="name">
+                Name:
+            </label><br>
+            <input id="name" type="text" placeholder="Enter your name">
+            <br>
+
+            <label for="email">
+                Email:
+            </label>
+            <input id="email" type="text" placeholder="Enter your email">
+
+            <label for="age">
+                Age:
+            </label>
+            <input id="age" type="number" placeholder="Enter your age">
+
+            
+            <p>Gender</p>
+            <input type="radio" name="gender" value="male">Male</input><br>
+            <input type="radio" name="gender" value="female">Female</input><br>
+            <input type="radio" name="gender" value="other">Other</input><br><br>
+
+            <p>Choose your State:</p> 
+            <select name="state" id="dropdown">
+                <option value="del">Delhi</option>
+                <option value="mum">Mumbai</option>
+                <option value="tn">Tamil Nadu</option>
+                <option value="ker">Kerala</option>
+                <option value="ts">Telangana</option>
+            </select><br>
+
+            <br>
+
+            <p>Which places do you prefer: </p>
+            
+            <input type="checkbox" name="place" value="hotel">Hotels</input><br>
+            <input type="checkbox" name="place" value="the">Theatres</input><br>
+            <input type="checkbox" name="place" value="par">Parks</input><br>
+            <input type="checkbox" name="place" value="bea">Beaches</input><br>
+
+           <br>
+            <p>Describe about your favourite place</p>
+            <textarea id="textarea" rows="5" cols="30">Type Here</textarea>
+            <br>
+
+            <p>Upload Image:</p>
+            <input type="file" id="upload" value="resume"><br><br>
+
+            <p>Rating (between 0 and 50):</p>
+            <input type="range" name="marks" min="0" max="50"><br><br>
+    
+
+            <input id="submit" type="submit" value="Submit">
+        </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>

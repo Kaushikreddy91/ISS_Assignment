@@ -1,0 +1,10 @@
+
+public class RegDao {
+	
+	private String dburl="jdbc;mysql://localhost:3307/userdb";
+	private String dbUname="root";
+	private String dbpass="kaushik2002";
+	
+	private String dbdriver="com.mysql.cj.jdbc.Driver";
+
+}

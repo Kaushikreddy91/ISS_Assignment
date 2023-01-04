@@ -1,0 +1,40 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.mysql.cj.xdevapi.Statement;
+
+public class jdbc_read {
+	private static Connection connection=null;
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String dbURL ="jdbc:mysql://localhost:3307/sample";
+			String username="root";
+			String password="kaushik2002";
+			
+			connection=DriverManager.getConnection(dbURL,username,password);
+			
+			String sql="select * from student";
+            
+			Statement statement = (Statement) connection.createStatement();
+			
+			ResultSet result = ((java.sql.Statement) statement).executeQuery(sql);
+			
+			while(result.next()) {
+				int roll_num=result.getInt("roll");
+				String name=result.getString("name");
+				System.out.println(" "+roll_num+"   "+name);
+			}
+			
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package oops;
+
+public class Square implements Polygon {
+	int size=5;
+	public int area(int side) {
+		
+	}
+
+}
